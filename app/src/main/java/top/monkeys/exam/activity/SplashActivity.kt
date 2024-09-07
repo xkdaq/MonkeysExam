@@ -1,11 +1,14 @@
 package top.monkeys.exam.activity
 
 import android.content.Intent
+import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
 import android.view.animation.RotateAnimation
 import android.view.animation.ScaleAnimation
+import androidx.core.content.ContextCompat
+import top.monkeys.exam.R
 import top.monkeys.exam.base.BaseActivity
 import top.monkeys.exam.databinding.ActivitySplashBinding
 
@@ -18,6 +21,9 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     }
 
     override fun initView() {
+        window.statusBarColor = ContextCompat.getColor(this, R.color.ff5)
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+
         val rotateAnimation = RotateAnimation(
             0f, 360f,
             Animation.RELATIVE_TO_SELF, 0.5f,
