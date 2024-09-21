@@ -62,4 +62,8 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("com.google.code.gson:gson:2.8.8")
 
+    implementation("com.googlecode.json-simple:json-simple:1.1.1") {
+        exclude(group = "junit")
+    }
+
 }

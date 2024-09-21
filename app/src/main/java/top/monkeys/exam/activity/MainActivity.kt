@@ -45,6 +45,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 handlePageSelected(position)
             }
         })
+
     }
 
     @SuppressLint("SetTextI18n")

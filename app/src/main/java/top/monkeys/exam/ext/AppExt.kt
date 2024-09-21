@@ -1,8 +1,10 @@
 package top.monkeys.exam.ext
 
 import android.content.Context
+import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import top.monkeys.exam.BuildConfig
 import top.monkeys.exam.bean.QuestionsResponse
 import top.monkeys.exam.bean.QuizQuestion
 import java.io.IOException
@@ -77,5 +79,11 @@ private fun loadJsonFromAssets(context: Context, fileName: String): String? {
     } catch (ex: IOException) {
         ex.printStackTrace()
         null
+    }
+}
+
+fun String.tolog() {
+    if (BuildConfig.DEBUG) {
+        Log.e("xxxxxx", "=====$this")
     }
 }
